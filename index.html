@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
+        crossorigin="anonymous"></script>
+    <title>MInterprete</title>
+</head>
+
+<body>
+
+    <div class="row m-4">
+        <div class="col-md-6">
+            <textarea id="input" class="form-control" rows="20"
+                placeholder="Aqui puedes escribir tu programa"></textarea>
+            <div class="row">
+                <div class="col my-3">
+                    <select class="form-select" id="examples" onchange="setExample()">
+                        <option selected>Aqui puede elegir un ejemplo predeterminado</option>
+                        <option value="1">Hola mundo</option>
+                        <option value="2">Operaciones</option>
+                        <option value="3">Condicionales</option>
+                        <option value="4">Ciclo condicional</option>
+                        <option value="5">Ciclo finito</option>
+                    </select>
+                </div>
+                <div class="col-md-2 my-3">
+                    <button type="button" class="btn btn-outline-primary" onclick="run()">Correr</button>
+                </div>
+            </div>
+            <textarea id="output" class="form-control" rows="20"
+                placeholder="Aqui puedes ver el resultado de tu programa"></textarea>
+        </div>
+
+        <div class="col-md-6">
+            <div class="h-100 p-5 bg-light border rounded-3">
+                <h4>Tipos de datos:</h4>
+                VARIABLE: Numero o cadena
+                <hr>
+
+                <h4>Operadores logicos/aritmeticos:</h4>
+                ARITMETICOS: +, -, *, /, %
+                <br>LOGICOS: ==, !=, <, <=, >, >=
+                <br>conjuncion (O), disyuncion (Y), negacion (NO)
+                <hr>
+
+                <h4>Funciones basicas:</h4>
+                SI, SINO, ENTONCES, FIN
+                <br>DESDE, HASTA, SIGUIENTE
+                <br>MIENTRAS, HAZ, TERMINAR
+                <br>IMPRIME, IMPRIMIR, LIMPIAR
+                <hr>
+
+                <h4>Funciones predefinidas:</h4>
+                FECHA()  
+                <br>TIEMPO()  
+                <br>ENTERO(variable)   
+                <br>FLOTANTE(variable)   
+                <br>CADENA(variable)  
+                <br>ESENTERO(variable)
+                <br>ESFLOTANTE(variable)
+                <br>ESCADENA(variable)
+                <br>ABSOLUTO(numero) 
+                <br>REDONDEO(numero)
+                <br>ABAJO(numero)
+                <br>ARRIBA(numero)
+                <br>SENO(numero) 
+                <br>COSENO(numero) 
+                <br>TANGENTE(numero) 
+                <br>LOGARITMO(numero) 
+                <br>EXPONENCIAL(numero) 
+                <br>POTENCIA(numero, numero)   
+                <br>RAIZ(numero)
+                <hr>
+
+                Ejecute los ejemplos para entender mejor las funciones
+            </div>
+        </div>
+    </div>
+
+    <script src="js/Examples.js"></script>
+    <script src="js/Datatype.js"></script>
+    <script src="js/Context.js"></script>
+    <script src="js/Position.js"></script>
+    <script src="js/Token.js"></script>
+    <script src="js/Lexer.js"></script>
+    <script src="js/Node.js"></script>
+    <script src="js/Parser.js"></script>
+    <script src="js/Interpreter.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
