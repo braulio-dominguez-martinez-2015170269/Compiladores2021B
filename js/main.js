@@ -6,26 +6,21 @@ function run() {
         [tokens, error] = new Lexer(prog.value).makeTokens()
         if (error) {
             console.log(error)
-            if (tokens) console.log(tokens)
         } else {
             if (tokens && error === undefined) {
                 [ast, error] = new Parser(tokens).parse()
             }
             if (error) {
                 console.log(error)
-                if (tokens) console.log(tokens)
-                if (ast) console.log(ast)
             } else {
                 if (ast && error === undefined) {
                     const startTime = new Date().getTime()
                         error = new Interpreter(ast).interpret()
                     const endTime = new Date().getTime()
-                    console.log((endTime - startTime), "ms")
+                    console.log("Terminado en",(endTime - startTime), "ms")
                 }
                 if (error) {
                     console.log(error)
-                    if (tokens) console.log(tokens)
-                    if (ast) console.log(ast)
                 }
             }
         }

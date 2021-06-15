@@ -20,7 +20,7 @@
             <textarea id="input" class="form-control" rows="20"
                 placeholder="Aqui puedes escribir tu programa"></textarea>
             <div class="row">
-                <div class="col my-3">
+                <div class="col-md-9 my-3">
                     <select class="form-select" id="examples" onchange="setExample()">
                         <option selected>Aqui puede elegir un ejemplo predeterminado</option>
                         <option value="1">Hola mundo</option>
@@ -41,7 +41,7 @@
         <div class="col-md-6">
             <div class="h-100 p-5 bg-light border rounded-3">
                 <h4>Tipos de datos:</h4>
-                VARIABLE: Numero o cadena
+                VARIABLE: number o cadena
                 <hr>
 
                 <h4>Operadores logicos/aritmeticos:</h4>
@@ -60,26 +60,26 @@
                 <h4>Funciones predefinidas:</h4>
                 FECHA()  
                 <br>TIEMPO()  
-                <br>ENTERO(variable)   
-                <br>FLOTANTE(variable)   
-                <br>CADENA(variable)  
-                <br>ESENTERO(variable)
-                <br>ESFLOTANTE(variable)
-                <br>ESCADENA(variable)
-                <br>ABSOLUTO(numero) 
-                <br>REDONDEO(numero)
-                <br>ABAJO(numero)
-                <br>ARRIBA(numero)
-                <br>SENO(numero) 
-                <br>COSENO(numero) 
-                <br>TANGENTE(numero) 
-                <br>LOGARITMO(numero) 
-                <br>EXPONENCIAL(numero) 
-                <br>POTENCIA(numero, numero)   
-                <br>RAIZ(numero)
+                <br>ENTERO(string|float)   
+                <br>FLOTANTE(string|int)   
+                <br>CADENA(int|float)  
+                <br>ESENTERO(orexpr)
+                <br>ESFLOTANTE(orexpr)
+                <br>ESCADENA(orexpr)
+                <br>ABSOLUTO(number) 
+                <br>REDONDEO(number)
+                <br>ABAJO(number)
+                <br>ARRIBA(number)
+                <br>SENO(number) 
+                <br>COSENO(number) 
+                <br>TANGENTE(number) 
+                <br>LOGARITMO(number) 
+                <br>EXPONENCIAL(number) 
+                <br>POTENCIA(number, number)   
+                <br>RAIZ(number)
                 <hr>
 
-                Ejecute los ejemplos para entender mejor las funciones
+                Puede ver la gramatica <a href="gramatica.txt" >aqui</a>
             </div>
         </div>
     </div>

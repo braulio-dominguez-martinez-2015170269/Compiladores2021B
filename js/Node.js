@@ -3,7 +3,6 @@ class Node {
         this.position = position
     }
 }
-
 class StatementNode extends Node {
     constructor(position, left, right) {
         super(position)
@@ -11,7 +10,6 @@ class StatementNode extends Node {
         this.right = right
     }
 }
-
 class IdentifierNode extends Node {
     constructor(position, identifier, access) {
         super(position)
@@ -19,127 +17,102 @@ class IdentifierNode extends Node {
         this.access = access
     }
 }
-
 class ReturnNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class IntConvNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class FloatConvNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class StringConvNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class IntTestNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class FloatTestNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class StringTestNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class SinNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class CosNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class TanNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class AbsNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class RoundNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
-
 class CeilNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class FloorNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class LogNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
 class ExpNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
-class SignNode extends Node {
-    constructor(position, arg) {
-        super(position)
-        this.arg = arg
-    }
-}
-
 class PowerNode extends Node {
     constructor(position, arg, exp) {
         super(position)
@@ -147,21 +120,12 @@ class PowerNode extends Node {
         this.exp = exp
     }
 }
-
 class SqrtNode extends Node {
     constructor(position, arg) {
         super(position)
         this.arg = arg
     }
 }
-
-class InputNode extends Node {
-    constructor(position, prompt) {
-        super(position)
-        this.prompt = prompt
-    }
-}
-
 class ForNode extends Node {
     constructor(position, forIdentifier, forStart, forEnd, forStep, forProg) {
         super(position)
@@ -172,7 +136,6 @@ class ForNode extends Node {
         this.forProg = forProg
     }
 }
-
 class DeclareIdentifierNode extends Node {
     constructor(position, identifier, access) {
         super(position)
@@ -180,14 +143,12 @@ class DeclareIdentifierNode extends Node {
         this.access = access
     }
 }
-
 class DeclareIfUndeclaredIdentifierNode extends Node {
     constructor(position, identifier) {
         super(position)
         this.identifier = identifier
     }
 }
-
 class FuncDefNode extends Node {
     constructor(position, identifier, prog, args, retvalue) {
         super(position)
@@ -197,7 +158,6 @@ class FuncDefNode extends Node {
         this.retvalue = retvalue
     }
 }
-
 class FuncCallNode extends Node {
     constructor(position, identifier, args) {
         super(position)
@@ -205,15 +165,6 @@ class FuncCallNode extends Node {
         this.args = args
     }
 }
-
-class NamespaceNode extends Node {
-    constructor(position, namespace, prog) {
-        super(position)
-        this.namespace = namespace
-        this.prog = prog
-    }
-}
-
 class AssignNode extends Node {
     constructor(position, name, value, writeAccess) {
         super(position)
@@ -222,174 +173,51 @@ class AssignNode extends Node {
         this.writeAccess = writeAccess
     }
 }
-
 class StringNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class IntNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
 class FloatNode extends Node {
     constructor(position, value) {
         super(position)
         this.value = value
     }
 }
-
-class ListNode extends Node {
-    constructor(position, args, access) {
-        super(position)
-        this.args = args
-        this.access = access
-    }
-}
-
 class PrintNode extends Node {
     constructor(position, args) {
         super(position)
         this.args = args
     }
 }
-
-class AscNode extends Node {
-    constructor(position, str) {
-        super(position)
-        this.str = str
-    }
-}
-
-class CharNode extends Node {
-    constructor(position, num) {
-        super(position)
-        this.num = num
-    }
-}
-
-class LeftNode extends Node {
-    constructor(position, str, num) {
-        super(position)
-        this.str = str
-        this.num = num
-    }
-}
-
-class RightNode extends Node {
-    constructor(position, str, num) {
-        super(position)
-        this.str = str
-        this.num = num
-    }
-}
-
-class MidNode extends Node {
-    constructor(position, str, num, amount) {
-        super(position)
-        this.str = str
-        this.num = num
-        this.amount = amount
-    }
-}
-
-class ColorNode extends Node {
-    constructor(position, args) {
-        super(position)
-        this.args = args
-    }
-}
-
-class FillColorNode extends Node {
-    constructor(position, args) {
-        super(position)
-        this.args = args
-    }
-}
-
-class LineWidthNode extends Node {
-    constructor(position, args) {
-        super(position)
-        this.args = args
-    }
-}
-
-class PointNode extends Node {
-    constructor(position, args) {
-        super(position)
-        this.args = args
-    }
-}
-
-class LineNode extends Node {
-    constructor(position, args) {
-        super(position)
-        this.args = args
-    }
-}
-
-class RectNode extends Node {
-    constructor(position, args) {
-        super(position)
-        this.args = args
-    }
-}
-
 class PrintLNNode extends Node {
     constructor(position, args) {
         super(position)
         this.args = args
     }
 }
-
-class DumpNode extends Node {
-    constructor(position) {
-        super(position)
-    }
-}
-
 class ClearNode extends Node {
     constructor(position) {
         super(position)
     }
 }
-
 class DateNode extends Node {
     constructor(position) {
         super(position)
     }
 }
-
 class TimeNode extends Node {
     constructor(position) {
         super(position)
     }
 }
-
-class RandomNode extends Node {
-    constructor(position) {
-        super(position)
-    }
-}
-
-class CPrintNode extends Node {
-    constructor(position, value) {
-        super(position)
-        this.value = value
-    }
-}
-
-class CDumpNode extends Node {
-    constructor(position) {
-        super(position)
-    }
-}
-
 class BinOpNode extends Node {
     constructor(position, left, operator, right) {
         super(position)
@@ -398,7 +226,6 @@ class BinOpNode extends Node {
         this.right = right
     }
 }
-
 class UnOpNode extends Node {
     constructor(position, left, operator) {
         super(position)
@@ -406,14 +233,6 @@ class UnOpNode extends Node {
         this.operator = operator
     }
 }
-
-class DTListNode extends Node {
-    constructor(position, list) {
-        super(position)
-        this.list = list
-    }
-}
-
 class WhileNode extends Node {
     constructor(position, condition, whiledo) {
         super(position)
@@ -421,7 +240,6 @@ class WhileNode extends Node {
         this.whiledo = whiledo
     }
 }
-
 class IfNode extends Node {
     constructor(position, condition, ifthen, ifelse) {
         super(position)
@@ -430,7 +248,6 @@ class IfNode extends Node {
         this.ifelse = ifelse
     }
 }
-
 class ClsNode extends Node {
     constructor(position) {
         super(position)

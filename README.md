@@ -1,5 +1,7 @@
 # Compiladores2021B
 
-En este repositorio se guarda el proyecto y las practicas realizados en el semestre
+Alternativa de proyecto:
 
-Para el proyecto se decidio plantear una alternativa propia, la cual consta de un interprete que se ejecuta en el navegador
+El proyecto consiste en un interprete del lenguaje BASIC adaptado al español,
+siendo este una version mas simple con algunas funciones basicas y predefinidas. 
+El interprete puede (y debe) ser usado desde el navegador. 

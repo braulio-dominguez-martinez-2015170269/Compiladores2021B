@@ -1,0 +1,50 @@
+program:            statement (lf statement)*
+statement:          "VARIABLE" identifier ("," identifier)*
+                    identifier expr "=" orexpr
+                    "SI" orexpr "ENTONCES" statement ("SINO" statement)?
+                    "SI" orexpr lf program lf ("SINO" program)? "FIN"
+                    "MIENTRAS" orexpr "HAZ" statement
+                    "MIENTRAS" orexpr lf program lf "TERMINAR"
+                    "DESDE" identifier "=" expr "HASTA" expr "SIGUIENTE"
+                    "LIMPIAR"
+                    "IMPRIME" (orexpr ("," orexpr)*)?
+                    "IMPRIMIR" (orexpr ("," orexpr)*)?
+
+orexpr:             andexpr ("O" andexpr)*
+andexpr:            eqexpr ("Y" eqexpr)*
+eqexpr:             glexpr (("=="|"!=") glexpr)*
+glexpr:             expr (("<"|"<="|">"|">=") expr)*
+
+expr:               term (("+"|"-") term)*
+term:               factor (("*"|"/"|"%") factor)*
+factor:             ("+"|"-")? int|float
+                    string
+                    "NO" orexpr
+                    "(" orexpr ")"
+                    buildin-function
+
+string:             """ ([^"]|\\")* """
+int:                [0-9]+
+float:              [0-9]+ ("." [0-9])+
+identifier:         [a-zA-Z_\$][\$_0-9\p{L}]*
+lf:                 ":"
+
+buildin-function:   "ENTERO(string|float)"
+                    "FLOTANTE(string|int)"
+                    "CADENA(int|float)"
+                    "ESENTERO(orexpr)"
+                    "ESFLOTANTE(orexpr)"
+                    "ESCADENA(orexpr)"
+                    "FECHA()"
+                    "TIEMPO()"
+                    "RAIZ(number)"
+                    "ABSOLUTO(number)"
+                    "REDONDEO(number)"
+                    "ABAJO(number)"
+                    "ARRIBA(number)"
+                    "SENO(number)"
+                    "COSENO(number)"
+                    "TANGENTE(number)"
+                    "LOGARITMO(number)"
+                    "EXPONENCIAL(number)"
+                    "POTENCIA(number, number)"

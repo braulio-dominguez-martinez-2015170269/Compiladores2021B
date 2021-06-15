@@ -1,11 +1,10 @@
 const TokenType = {
-    "EOF": "EOF",
     "ENTERO": "ENTERO",
     "FLOTANTE": "FLOTANTE",
-    "NUMBER": "NUMBER",
+    "NUMERO": "NUMERO",
     "CADENA": "CADENA",
-    "PLUS": "PLUS",
-    "MINUS": "MINUS",
+    "SUMA": "SUMA",
+    "RESTA": "RESTA",
     "MUL": "MUL",
     "DIV": "DIV",
     "MOD": "MOD",
@@ -17,6 +16,7 @@ const TokenType = {
     "COMMA": "COMMA",
     "COLON": "COLON",
     "DOT": "DOT",
+    "ID": "ID",
     "NO": "NO",
     "EQ": "EQ",
     "NE": "NE",
@@ -24,10 +24,9 @@ const TokenType = {
     "LE": "LE",
     "GT": "GT",
     "GE": "GE",
-    "IDENTIFIER": "IDENTIFIER",
-    "KEYWORD": "KEYWORD"
+    "EOF": "EOF",
+    "KEY": "KEY"
 }
-
 const KEYWORDS = [
     "VARIABLE",
     "Y", "O", "NO",
@@ -41,20 +40,7 @@ const KEYWORDS = [
     "RAIZ", "ABSOLUTO", "SENO", "COSENO", "TANGENTE", "REDONDEO", "ARRIBA", "ABAJO",
     "LOGARITMO", "EXPONENCIAL", "POTENCIA",
     "FECHA", "TIEMPO",
-    // POR DEFINIR
-    "FUNCTION", "ENDFUNCTION", "RETURN",
-    "NAMESPACE", "ENDNAMESPACE", "CLEAR",
-    "CPRINT",
-    "DUMP", "CDUMP",
-    "RND",
-    "LEFT", "RIGHT", "MID",
-    "STROKECOLOR", "FILLCOLOR", "POINT", "LINE", "RECT", "LINEWIDTH",
-    "INPUT",
-    "STEP", 
-    "LEN", "ASC", "CHAR",
-    "SIGN",
 ]
-
 class Token {
     constructor(tokentype, value, position) {
         this.tokentype = tokentype

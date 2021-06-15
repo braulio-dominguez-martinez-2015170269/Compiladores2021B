@@ -8,14 +8,12 @@ class Context {
         this.symbolTable = new SymbolTable(context, parentContext)
     }
 }
-
 class SymbolTable {
     constructor(context, parentContext) {
         this.context = context
         this.parentContext = parentContext
         this.symtable = {}
     }
-
     setVar(name, value, writeElement = undefined) {
         if (name in this.symtable) {
             if (writeElement !== undefined) {
@@ -28,7 +26,6 @@ class SymbolTable {
             return undefined
         }
     }
-
     declareVar(name) {
         if (!(name in this.symtable)) {
             this.symtable[name] = new DTNull()
@@ -37,7 +34,6 @@ class SymbolTable {
             return undefined
         }
     }
-
     getVar(name) {
         if (name in this.symtable) {
             return this.symtable[name]
@@ -47,11 +43,9 @@ class SymbolTable {
             return undefined
         }
     }
-
     testVarThisContext(name) {
         return name in this.symtable
     }
-
     testVar(name) {
         if (name in this.symtable) {
             return true
@@ -61,7 +55,6 @@ class SymbolTable {
             return false
         }
     }
-    
     getAllVars() {
         let result = []
         for (let key in this.symtable) {

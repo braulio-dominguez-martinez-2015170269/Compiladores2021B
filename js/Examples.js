@@ -2,7 +2,6 @@ function setExample(){
     const text = getText(document.getElementById("examples").value)
     document.getElementById("input").value = text
 }
-
 function getText(example){
     switch (example) {
         case "1":
